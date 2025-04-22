@@ -24,13 +24,24 @@
 
 .counter-display {
   font-size: 1.5rem;
-  color: #555555;
   margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.counter-display.positive {
+  color: #28a745;
+}
+
+.counter-display.negative {
+  color: #dc3545;
+}
+
+.counter-display.neutral {
+  color: #555555;
 }
 
 .counter-display span {
   font-weight: bold;
-  color: #007bff;
 }
 
 .button-group {
@@ -45,7 +56,11 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.counter-button:hover {
+  transform: scale(1.1);
 }
 
 .counter-button.increment {
