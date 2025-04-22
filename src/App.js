@@ -6,11 +6,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Click Counter</h1>
-      <p>Current Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-      <button onClick={() => setCount(0)}>Reset</button>
+      <div className="counter-container">
+        <h1 className="counter-title">Click Counter</h1>
+        <p className="counter-display">Current Count: <span>{count}</span></p>
+        <div className="button-group">
+          <button className="counter-button increment" onClick={() => setCount(count + 1)}>Increment</button>
+          <button className="counter-button decrement" onClick={() => setCount(count - 1)}>Decrement</button>
+          <button className="counter-button reset" onClick={() => setCount(0)}>Reset</button>
+        </div>
+      </div>
     </div>
   );
 }
